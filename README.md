@@ -96,25 +96,7 @@ Overall commands that are given in this instance are shown in the above figure.
 13.You will enter into the mysql workbench sever with RDS connection as below, we can excecute sql commands in that workspace.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![terra 4](https://github.com/sindhuk02/AWS_RDS_USING_TERRAFORM/assets/157628894/022be497-bf1d-46c0-a171-d694e0444e33)
 
 
 
