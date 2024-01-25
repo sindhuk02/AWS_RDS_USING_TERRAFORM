@@ -79,7 +79,11 @@ save the following script in main.tf file which have the all information of aws 
    I had mentioned 3306 port in the security group of that instance which is default port of MYSQL engine
 
 9.To execute the scrips in the files, we have to run the following commands terraform init # It downloads required plugins for that infrastructure terraform plan # Print output, what it’s going to create terraform apply # creates the infrastructure (RDS in this project).
+
 Overall commands that are given in this instance are shown in the above figure.
+
+
+![terra3](https://github.com/sindhuk02/AWS_RDS_USING_TERRAFORM/assets/157628894/e527e4d9-7bef-4f3f-b14a-d25b8720689a)
 
 
 
