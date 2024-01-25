@@ -85,5 +85,12 @@ Overall commands that are given in this instance are shown in the above figure.
 
 ![terra3](https://github.com/sindhuk02/AWS_RDS_USING_TERRAFORM/assets/157628894/e527e4d9-7bef-4f3f-b14a-d25b8720689a)
 
+10.After creation of AWS RDS we will get endpoint which is like host name to connect the database to MYSQL workbench , go to the RDS >database>click on the created database there we get Endpoint address , copy that endpoint.
+11.Install and open the MYSQL workbench click on symbol of mysql connections then add all credentials to connect with our database.
+12.Enter the details: Connection name: can be any; Hostname: endpoint of rds , username: one which we gave in “main.tf”file and after clicking on store in vault we can enter password the same which we gave in “main.tf”. Click on test connection and click on connection.
+
+
+
+
 
 
