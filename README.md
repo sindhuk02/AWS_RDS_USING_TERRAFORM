@@ -90,6 +90,38 @@ Overall commands that are given in this instance are shown in the above figure.
 12.Enter the details: Connection name: can be any; Hostname: endpoint of rds , username: one which we gave in “main.tf”file and after clicking on store in vault we can enter password the same which we gave in “main.tf”. Click on test connection and click on connection.
 
 
+![terra 4](https://github.com/sindhuk02/AWS_RDS_USING_TERRAFORM/assets/157628894/352d343b-6896-41f1-bddb-ecbad875d831)
+
+
+13.You will enter into the mysql workbench sever with RDS connection as below, we can excecute sql commands in that workspace.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14.By this we had verified that RDS instance is working correctly by connecting to it using a SQL client, such as MySQL Workbench or pgAdmin.
+By this project we will be able to demonstrate our ability to use Terraform to provision AWS resources, as well as we can understand of how RDS works and how to configure it using Terraform.
+
+
 
 
 
