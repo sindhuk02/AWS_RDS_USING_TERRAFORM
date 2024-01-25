@@ -1,1 +1,1 @@
-# AWS_RDS_USING_TERRAFORM
+PROJECT 1: Provisioning AWS RDS with Terraform
