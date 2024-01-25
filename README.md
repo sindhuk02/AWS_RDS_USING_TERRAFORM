@@ -17,7 +17,8 @@ STEPS TO CREATE AWS RDS :
 4.After execution above commands, we installed Terraform and its supporting packages, from the above link we downloaded HASHICORP LANGUAGE packages
 
 5.After installation create a directory with command mkdir<directory_name> and go to that directory with command cd < directory_name >.
-6.Create a file name variable.tf and provide the variables for your RDS instance in a variables.tf file using HCL script mentioned below. Some variables that are included are      the database engine, instance size, storage size, username and password, and backup retention period. Create that file with the command vi variable.tf. it automatically          created and entered into that file by entering “I” (insert) the variables script mentioned in the below picture. I had entered my configurations in that script as variables.     For access_key and secret_key we have to create a IAM user with suitable permission and generate access_key and secret_key for that IAM user , paste this keys in the variable    file script and save it.
+6.Create a file name variable.tf and provide the variables for your RDS instance in a variables.tf file using HCL script mentioned below. Some variables that are included are  the database engine, instance size, storage size, username and password, and backup retention period. Create that file with the command vi variable.tf. it automatically       created and entered into that file by entering “I” (insert) the variables script mentioned in the below picture. I had entered my configurations in that script as variables. For access_key and secret_key we have to create a IAM user with suitable permission and generate access_key and secret_key for that IAM user , paste this keys in the variable  file script and save it.
+
 7.create a file variable.tf and save the following script in the file
 
 variable "access_key" { description = "AWS access key" type = string default = "AKIATX6ULZXLPSOT7VHR" }
@@ -33,4 +34,8 @@ variable "username" { description = "Username for the RDS instance" type = strin
 variable "password" { description = "Password for the RDS instance" type = string default = "admin123" }
 
 variable "backup_retention_period" { description = "Backup retention period in days" type = number default = 7 }
+
+
+
+![terra2](https://github.com/sindhuk02/AWS_RDS_USING_TERRAFORM/assets/157628894/e85ad178-f25e-4ed7-8e80-4abe218da407)
 
