@@ -39,3 +39,47 @@ variable "backup_retention_period" { description = "Backup retention period in d
 
 ![terra2](https://github.com/sindhuk02/AWS_RDS_USING_TERRAFORM/assets/157628894/e85ad178-f25e-4ed7-8e80-4abe218da407)
 
+8.Again create another with command “ vi main.tf ” and define the Terraform resources for your RDS instance. Use the aws_db_instance resource type to create the RDS instance, and set the resource properties according to your chosen configuration, I had defined my configuration for my database as below script. Save the script in the file.
+
+save the following script in main.tf file which have the all information of aws rds creation #
+
+  provider "aws" {
+    region = "ap-south-1"
+    access_key = "AKIATX6ULZXLPSOT7VHR"
+    secret_key = "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"
+  }
+  data "aws_vpc" "existing_vpc" {
+    id = "vpc-07639b04723b3cae2"
+  }
+  resource "aws_db_subnet_group" "subnet" {
+    name       = "subnet"
+    subnet_ids = ["subnet-074b79862bb793109","subnet-0ffcc8e0b3e164dc1","subnet-07bd55d8010cbffad"]
+  }
+  
+  resource "aws_db_instance" "myinstance" {
+    engine              = "mysql"
+    engine_version      = "8.0.33"
+    allocated_storage   = 20
+    storage_type        = "gp2"
+    instance_class      = "db.t2.micro"
+    identifier          = "mysql-rds-instance"
+    username            = "admin"
+    password            = "admin123"
+    parameter_group_name = "default.mysql8.0"
+    vpc_security_group_ids = ["sg-0a754f37be5a64b87"]
+    db_subnet_group_name   = aws_db_subnet_group.subnet.name
+    skip_final_snapshot    = true
+    publicly_accessible    = true
+  }
+  
+  output "rds_endpoint" {
+    value = aws_db_instance.myinstance.endpoint
+  }
+
+   I had mentioned 3306 port in the security group of that instance which is default port of MYSQL engine
+
+9.To execute the scrips in the files, we have to run the following commands terraform init # It downloads required plugins for that infrastructure terraform plan # Print output, what it’s going to create terraform apply # creates the infrastructure (RDS in this project).
+Overall commands that are given in this instance are shown in the above figure.
+
+
+
